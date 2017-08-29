@@ -1,54 +1,54 @@
+package ec3;
+
 import javax.swing.JOptionPane;
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
 import java.io.IOException;
 
-public class main {
+public class Program {
 		 
-	public static void main(String args[]) throws IOException{
-		String entra,marca,cor,serial;
-		int escolha,quantidade,comfirm;
-		double id,valor;
+	public static void main(String args[]) throws IOException
+	{
+		String entra, marca, cor, serial;
+		int escolha, quantidade, comfirm;
+		double id, valor;
 		boolean bool;
 		
 		FileOutputStream local = new FileOutputStream("c:\\Users\\Usuario\\Desktop\\PO2\\trabalho3\\produtos.dat");
 		ObjectOutputStream escrever = new ObjectOutputStream(local);
-		do{
-			entra = JOptionPane.showInputDialog("\t Olá insira os atributos dos Produtos\n"
-					+ "1) Almofada \n"
-					+ "2) Caixa de som \n"
-					+ "3) Cerveja \n"
-					+ "4) Colher \n"
-					+ "5) Produtos \n"
-					+ "6) Teclado \n"
-					+ "0) sair");
+		
+		do {
+			entra = JOptionPane.showInputDialog(""
+				+ "OlÃ¡ insira os atributos dos Produtos:\n"
+				+ "\t1) Almofada \n"
+				+ "\t2) Caixa de som \n"
+				+ "\t3) Cerveja \n"
+				+ "\t4) Colher \n"
+				+ "\t5) Produtos \n"
+				+ "\t6) Teclado \n"
+				+ "\t0) Sair"
+			);
+
 			escolha = Integer.parseInt(entra);
 			
-			switch (escolha){
+			switch (escolha)
+			{
 				case 1:
-				 	entra = JOptionPane.showInputDialog("Digite a marca");
-				 	marca = entra;
-				 	entra = JOptionPane.showInputDialog("Digite qual a cor da almofada");
-				 	cor  = entra;
-				 	entra = JOptionPane.showInputDialog("Digite qual o serial");
-				 	serial = entra;
-				 	entra = JOptionPane.showInputDialog("Digite qual o ID");
-				 	id = Double.parseDouble(entra);
-				 	entra = JOptionPane.showInputDialog("Digite qual o Valor");
-				 	valor = Double.parseDouble(entra);
-				 	entra = JOptionPane.showInputDialog("Digite a quantidade de pensa dentro dessa almogada");
-				 	quantidade = Integer.parseInt(entra);
-				 	comfirm = JOptionPane.showConfirmDialog(null,"Mas tem penas?");
-				 	if(comfirm == JOptionPane.YES_OPTION){
-				 		bool = true;
-				 	}else{
-				 		bool = false;
-				 	}
+					marca = JOptionPane.showInputDialog("Digite a marca");
+					cor = JOptionPane.showInputDialog("Digite qual a cor da almofada");
+					serial = JOptionPane.showInputDialog("Digite qual o serial");
+					id = Double.parseDouble(JOptionPane.showInputDialog("Digite qual o ID"));
+					preco = Double.parseDouble(JOptionPane.showInputDialog("Digite qual o PreÃ§o"));
+					quantidade = Integer.parseInt(JOptionPane.showInputDialog("Digite a quantidade de pensa dentro dessa almogada"));
+										  
+					bool = JOptionPane.showConfirmDialog(null,"Mas tem penas?") == JOptionPane.YES_OPTION;
+					
 					Almofada almofada = new Almofada("Almofada", marca, cor, serial, id, 0, quantidade, bool);
-					almofada.setValor(valor);
+					almofada.setValor(preco);
 					
 					escrever.writeObject(almofada);
 				break;
+
 				case 2:
 				 	entra = JOptionPane.showInputDialog("Digite a marca");
 				 	marca = entra;
@@ -86,7 +86,7 @@ public class main {
 				 	valor = Double.parseDouble(entra);
 				 	entra = JOptionPane.showInputDialog("Digite quatas cervejas vem em um fardo");
 				 	quantidade = Integer.parseInt(entra);
-				 	comfirm = JOptionPane.showConfirmDialog(null,"É de trigo??");
+				 	comfirm = JOptionPane.showConfirmDialog(null,"ï¿½ de trigo??");
 				 	if(comfirm == JOptionPane.YES_OPTION){
 				 		bool = true;
 				 	}else{
@@ -110,7 +110,7 @@ public class main {
 				 	valor = Double.parseDouble(entra);
 				 	entra = JOptionPane.showInputDialog("Digite qual o peso da colher?");
 				 	quantidade = Integer.parseInt(entra);
-				 	comfirm = JOptionPane.showConfirmDialog(null,"É de sopa??");
+				 	comfirm = JOptionPane.showConfirmDialog(null,"ï¿½ de sopa??");
 				 	if(comfirm == JOptionPane.YES_OPTION){
 				 		bool = true;
 				 	}else{
@@ -134,7 +134,7 @@ public class main {
 				 	valor = Double.parseDouble(entra);
 				 	entra = JOptionPane.showInputDialog("Digite a quantidade de teclas");
 				 	quantidade = Integer.parseInt(entra);
-				 	comfirm = JOptionPane.showConfirmDialog(null,"É RAZER!!!!??");
+				 	comfirm = JOptionPane.showConfirmDialog(null,"ï¿½ RAZER!!!!??");
 				 	if(comfirm == JOptionPane.YES_OPTION){
 				 		bool = true;
 				 	}else{
@@ -148,7 +148,8 @@ public class main {
 			}
 			
 		
-		}while(escolha != 0);
+		} while(escolha != 0);
+
 		escrever.close();
 	}
 

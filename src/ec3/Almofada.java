@@ -1,12 +1,14 @@
+package ec3;
 
-public class Almofada extends Produtos{
-	
-	private String cor,marca;
+public class Almofada extends Produtos
+{	
+	private String cor, marca;
 	private double valor;
 	private int qtd_de_penas;
 	private boolean penas;
 
-	public Almofada(String nome,String marca, String cor, String serial, double ID, double valor, int qtd_de_penas, boolean penas) {
+	public Almofada(String nome, String marca, String cor, String serial, double ID, double valor, int qtd_de_penas, boolean penas) 
+	{
 		super(nome, serial, ID);
 		// TODO Auto-generated constructor stub
 		

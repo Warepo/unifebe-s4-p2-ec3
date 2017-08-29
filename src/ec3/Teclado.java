@@ -1,7 +1,8 @@
+package ec3;
 
 public class Teclado extends Produtos{
 	
-	private String cor,marca;
+	private String cor, marca;
 	private double valor;
 	private int qtd_teclas;
 	private boolean razer;
@@ -21,7 +22,7 @@ public class Teclado extends Produtos{
 	}
 	
 	public void getDados(){
-		System.out.println("Nome: "+this.nome+" Marca:"+this.marca+" Cor:"+this.cor+" Serial: "+this.ID+" Valor: "+this.valor+" Qtd de teclas: "+this.qtd_teclas+" É da Razer: "+this.razer);
+		System.out.println("Nome: "+this.nome+" Marca:"+this.marca+" Cor:"+this.cor+" Serial: "+this.ID+" Valor: "+this.valor+" Qtd de teclas: "+this.qtd_teclas+" ï¿½ da Razer: "+this.razer);
 	}
 	
 

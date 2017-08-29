@@ -1,6 +1,7 @@
+package ec3;
 
-public class Caixa_de_som extends Produtos {
-
+public class Caixa_de_som extends Produtos 
+{
 	private String cor,marca;
 	private double valor;
 	private int qtd_de_caixas;
