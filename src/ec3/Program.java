@@ -1,24 +1,25 @@
 package ec3;
 
 import javax.swing.JOptionPane;
+
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
 import java.io.IOException;
 
-public class Program {
-		 
+public class Program 
+{		 
 	public static void main(String args[]) throws IOException
 	{
-		String entra, marca, cor, serial;
+		String entrada, marca, cor, serial;
 		int escolha, quantidade, comfirm;
-		double id, valor;
+		double id, preco;
 		boolean bool;
 		
-		FileOutputStream local = new FileOutputStream("c:\\Users\\Usuario\\Desktop\\PO2\\trabalho3\\produtos.dat");
+		FileOutputStream local = new FileOutputStream("..\\files\\produtos.dat");
 		ObjectOutputStream escrever = new ObjectOutputStream(local);
 		
 		do {
-			entra = JOptionPane.showInputDialog(""
+			entrada = JOptionPane.showInputDialog(""
 				+ "Olá insira os atributos dos Produtos:\n"
 				+ "\t1) Almofada \n"
 				+ "\t2) Caixa de som \n"
@@ -29,7 +30,7 @@ public class Program {
 				+ "\t0) Sair"
 			);
 
-			escolha = Integer.parseInt(entra);
+			escolha = Integer.parseInt(entrada);
 			
 			switch (escolha)
 			{
@@ -44,104 +45,71 @@ public class Program {
 					bool = JOptionPane.showConfirmDialog(null,"Mas tem penas?") == JOptionPane.YES_OPTION;
 					
 					Almofada almofada = new Almofada("Almofada", marca, cor, serial, id, 0, quantidade, bool);
-					almofada.setValor(preco);
+					almofada.setpreco(preco);
 					
 					escrever.writeObject(almofada);
 				break;
 
 				case 2:
-				 	entra = JOptionPane.showInputDialog("Digite a marca");
-				 	marca = entra;
-				 	entra = JOptionPane.showInputDialog("Digite qual a cor da caixa");
-				 	cor  = entra;
-				 	entra = JOptionPane.showInputDialog("Digite qual o serial");
-				 	serial = entra;
-				 	entra = JOptionPane.showInputDialog("Digite qual o ID");
-				 	id = Double.parseDouble(entra);
-				 	entra = JOptionPane.showInputDialog("Digite qual o Valor");
-				 	valor = Double.parseDouble(entra);
-				 	entra = JOptionPane.showInputDialog("Digite a quantidade de caixas");
-				 	quantidade = Integer.parseInt(entra);
-				 	comfirm = JOptionPane.showConfirmDialog(null,"Usa pilhas?");
-				 	if(comfirm == JOptionPane.YES_OPTION){
-				 		bool = true;
-				 	}else{
-				 		bool = false;
-				 	}
+					marca = JOptionPane.showInputDialog("Digite a marca");
+				 	cor = JOptionPane.showInputDialog("Digite qual a cor da caixa");
+				 	serial = JOptionPane.showInputDialog("Digite qual o serial");
+				 	id = Double.parseDouble(JOptionPane.showInputDialog("Digite qual o ID"));
+				 	preco = Double.parseDouble(JOptionPane.showInputDialog("Digite qual o preco"));
+					quantidade = Integer.parseInt(JOptionPane.showInputDialog("Digite a quantidade de caixas"));
+				
+					bool = JOptionPane.showConfirmDialog(null,"Usa pilhas?") == JOptionPane.YES_OPTION;
+					
 					Caixa_de_som caixa = new Caixa_de_som("Caixa de Som", marca, cor, serial, id, 0, quantidade, bool);
-					caixa.setValor(valor);
+					
+					caixa.setpreco(preco);
 					
 					escrever.writeObject(caixa);
 				break;
+
 				case 3:
-				 	entra = JOptionPane.showInputDialog("Digite a marca");
-				 	marca = entra;
-				 	entra = JOptionPane.showInputDialog("Digite qual o tipo da cerveja");
-				 	cor  = entra;
-				 	entra = JOptionPane.showInputDialog("Digite qual o serial");
-				 	serial = entra;
-				 	entra = JOptionPane.showInputDialog("Digite qual o ID");
-				 	id = Double.parseDouble(entra);
-				 	entra = JOptionPane.showInputDialog("Digite qual o Valor");
-				 	valor = Double.parseDouble(entra);
-				 	entra = JOptionPane.showInputDialog("Digite quatas cervejas vem em um fardo");
-				 	quantidade = Integer.parseInt(entra);
-				 	comfirm = JOptionPane.showConfirmDialog(null,"� de trigo??");
-				 	if(comfirm == JOptionPane.YES_OPTION){
-				 		bool = true;
-				 	}else{
-				 		bool = false;
-				 	}
-					Cerveja cevada = new Cerveja("Caixa de Som", marca, cor, serial, id, 0, quantidade, bool);
-					cevada.setValor(valor);
+					marca = JOptionPane.showInputDialog("Digite a marca");
+					cor = JOptionPane.showInputDialog("Digite qual o tipo da cerveja");
+					serial = JOptionPane.showInputDialog("Digite qual o serial");
+					id = Double.parseDouble(JOptionPane.showInputDialog("Digite qual o ID"));
+					preco = Double.parseDouble(JOptionPane.showInputDialog("Digite qual o preco"));
+				 	quantidade = Integer.parseInt(JOptionPane.showInputDialog("Digite quatas cervejas vem em um fardo"));					 
+					bool = JOptionPane.showConfirmDialog(null, "É de trigo?") == JOptionPane.YES_OPTION;
+					 
+					Cerveja cerveja = new Cerveja("Caixa de Som", marca, cor, serial, id, 0, quantidade, bool);
+					cerveja.setpreco(preco);
 					
-					escrever.writeObject(cevada);
+					escrever.writeObject(cerveja);
 				break;
+
 				case 4:
-				 	entra = JOptionPane.showInputDialog("Digite a tipo de metal");
-				 	marca = entra;
-				 	entra = JOptionPane.showInputDialog("Digite qual a cor do cabo");
-				 	cor  = entra;
-				 	entra = JOptionPane.showInputDialog("Digite qual o serial");
-				 	serial = entra;
-				 	entra = JOptionPane.showInputDialog("Digite qual o ID");
-				 	id = Double.parseDouble(entra);
-				 	entra = JOptionPane.showInputDialog("Digite qual o Valor");
-				 	valor = Double.parseDouble(entra);
-				 	entra = JOptionPane.showInputDialog("Digite qual o peso da colher?");
-				 	quantidade = Integer.parseInt(entra);
-				 	comfirm = JOptionPane.showConfirmDialog(null,"� de sopa??");
-				 	if(comfirm == JOptionPane.YES_OPTION){
-				 		bool = true;
-				 	}else{
-				 		bool = false;
-				 	}
+					marca = JOptionPane.showInputDialog("Digite a tipo de metal");
+				 	ecorntrada = JOptionPane.showInputDialog("Digite qual a cor do cabo");
+					serial = JOptionPane.showInputDialog("Digite qual o serial");
+				 	id = Double.parseDouble( JOptionPane.showInputDialog("Digite qual o ID"));
+				 	preco = Double.parseDouble(JOptionPane.showInputDialog("Digite qual o preco"));
+				 	quantidade = Integer.parseInt(JOptionPane.showInputDialog("Digite qual o peso da colher?"));
+					 
+				 	bool = JOptionPane.showConfirmDialog(null, "É de sopa?") == JOptionPane.YES_OPTION;
+				 						 
 					Colher culhe = new Colher("Culher", marca, cor, serial, id, 0, quantidade, bool);
-					culhe.setValor(valor);
+					culhe.setpreco(preco);
 					
 					escrever.writeObject(culhe);
 				break;
+
 				case 5:
-				 	entra = JOptionPane.showInputDialog("Digite a tipo de metal");
-				 	marca = entra;
-				 	entra = JOptionPane.showInputDialog("Digite qual a cor do teclado");
-				 	cor  = entra;
-				 	entra = JOptionPane.showInputDialog("Digite qual o serial");
-				 	serial = entra;
-				 	entra = JOptionPane.showInputDialog("Digite qual o ID");
-				 	id = Double.parseDouble(entra);
-				 	entra = JOptionPane.showInputDialog("Digite qual o Valor");
-				 	valor = Double.parseDouble(entra);
-				 	entra = JOptionPane.showInputDialog("Digite a quantidade de teclas");
-				 	quantidade = Integer.parseInt(entra);
-				 	comfirm = JOptionPane.showConfirmDialog(null,"� RAZER!!!!??");
-				 	if(comfirm == JOptionPane.YES_OPTION){
-				 		bool = true;
-				 	}else{
-				 		bool = false;
-				 	}
+					marca = JOptionPane.showInputDialog("Digite a tipo de metal");
+					cor = JOptionPane.showInputDialog("Digite qual a cor do teclado");
+					serial = JOptionPane.showInputDialog("Digite qual o serial");
+					id = Double.parseDouble(JOptionPane.showInputDialog("Digite qual o ID"));
+				 	preco = Double.parseDouble(JOptionPane.showInputDialog("Digite qual o preco"));
+					quantidade = Integer.parseInt(JOptionPane.showInputDialog("Digite a quantidade de teclas"));
+					bool = JOptionPane.showConfirmDialog(null, "É Razer?") == JOptionPane.YES_OPTION;
+
 					Teclado tecla = new Teclado("Teclado", marca, cor, serial, id, 0, quantidade, bool);
-					tecla.setValor(valor);
+					
+					tecla.setpreco(preco);
 					
 					escrever.writeObject(tecla);
 				break;
