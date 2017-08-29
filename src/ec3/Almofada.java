@@ -3,35 +3,35 @@ package ec3;
 public class Almofada extends Produtos
 {	
 	private String cor, marca;
-	private double valor;
+	private double preco;
 	private int qtd_de_penas;
 	private boolean penas;
 
-	public Almofada(String nome, String marca, String cor, String serial, double ID, double valor, int qtd_de_penas, boolean penas) 
+	public Almofada(String nome, String marca, String cor, String serial, double ID, double preco, int qtd_de_penas, boolean penas) 
 	{
 		super(nome, serial, ID);
 		// @TODO: Auto-generated constructor stub
 		
-		this.valor = valor;
+		this.preco = preco;
 		this.cor = cor;
 		this.qtd_de_penas = qtd_de_penas;
 		this.penas = penas;
 		this.marca = marca;
 	}
 	
-	public Double getValor()
+	public Double getpreco()
 	{
-		return this.valor;
+		return this.preco;
 	}
 	
-	public void setValor(double valor)
+	public void setpreco(double preco)
 	{
-		 this.valor = valor;
+		 this.preco = preco;
 	}
 	
 	public void getDados()
 	{
-		System.out.println("Nome: "+this.nome+" Marca:"+this.marca+" Serial: "+this.ID+" Valor: "+this.valor+" Quantidade de penas: "+this.qtd_de_penas+" Tem penas: "+this.penas);
+		System.out.println("Nome: " + this.nome + " Marca: " + this.marca + " Serial: " + this.ID + " preco: " + this.preco + " Quantidade de penas: " + this.qtd_de_penas + " Tem penas: " + this.penas);
 	}
 
 }

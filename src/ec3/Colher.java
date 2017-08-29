@@ -3,15 +3,15 @@ package ec3;
 public class Colher extends Produtos {
 	
 	private String cor, metal;
-	private double valor;
+	private double preco;
 	private int peso;
 	private boolean de_sopa;
 
-	public Colher(String nome, String metal, String cor, String serial, double ID, double valor, int peso, boolean de_sopa) 
+	public Colher(String nome, String metal, String cor, String serial, double ID, double preco, int peso, boolean de_sopa) 
 	{
 		super(nome, serial, ID);
 
-		this.valor = valor;
+		this.preco = preco;
 		this.cor = cor;
 		this.peso = peso;
 		this.de_sopa = de_sopa;
@@ -23,13 +23,13 @@ public class Colher extends Produtos {
 		return this.metal;
 	}
 	
-	public void setValor(double valor) 
+	public void setpreco(double preco) 
 	{
-		 this.valor = valor;
+		 this.preco = preco;
 	}
 	
 	public void getDados()
 	{
-		System.out.println("Nome: " + this.nome + " Metal: " + this.metal + " Cor: " + this.cor + " Serial: " + this.ID + " Valor: " + this.valor + " Peso: " + this.peso + " É de Sopa: " + this.de_sopa);
+		System.out.println("Nome: " + this.nome + " Metal: " + this.metal + " Cor: " + this.cor + " Serial: " + this.ID + " preco: " + this.preco + " Peso: " + this.peso + " É de Sopa: " + this.de_sopa);
 	}
 }
