@@ -1,5 +1,0 @@
-Brasil#x#Argentina#:#3#x#0
-Coreia#x#Japao#:#1#x#2
-Alemanha#x#Peru#:#1#x#0
-EUA#x#Espanha#:#2#x#2
-Africa#x#Mexico#:#1#x#2
