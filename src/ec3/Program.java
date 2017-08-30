@@ -1,5 +1,3 @@
-package ec3;
-
 import javax.swing.JOptionPane;
 
 import java.io.FileOutputStream;
@@ -61,7 +59,6 @@ public class Program
 					bool = JOptionPane.showConfirmDialog(null,"Usa pilhas?") == JOptionPane.YES_OPTION;
 					
 					Caixa_de_som caixa = new Caixa_de_som("Caixa de Som", marca, cor, serial, id, 0, quantidade, bool);
-					
 					caixa.setpreco(preco);
 					
 					escrever.writeObject(caixa);
@@ -108,7 +105,6 @@ public class Program
 					bool = JOptionPane.showConfirmDialog(null, "É Razer?") == JOptionPane.YES_OPTION;
 
 					Teclado tecla = new Teclado("Teclado", marca, cor, serial, id, 0, quantidade, bool);
-					
 					tecla.setpreco(preco);
 					
 					escrever.writeObject(tecla);
@@ -116,9 +112,8 @@ public class Program
 			}
 			
 		
-		} while(escolha != 0);
+		} while (escolha != 0);
 
 		escrever.close();
 	}
-
 }

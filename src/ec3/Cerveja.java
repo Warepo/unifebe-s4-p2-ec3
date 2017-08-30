@@ -1,6 +1,4 @@
-package ec3;
-
-public class Cerveja extends Produtos{
+public class Cerveja extends ec3.Produtos{
 	
 	private String tipo,marca;
 	private double preco;

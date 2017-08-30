@@ -1,6 +1,4 @@
-package ec3;
-
-public class Colher extends Produtos {
+public class Colher extends ec3.Produtos {
 	
 	private String cor, metal;
 	private double preco;
