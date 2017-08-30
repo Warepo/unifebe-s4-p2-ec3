@@ -1,3 +1,5 @@
+package ec3.produtos;
+
 public class Almofada extends Produto
 {	
 	private String cor, marca;

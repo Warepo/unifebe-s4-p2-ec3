@@ -1,3 +1,5 @@
+package ec3;
+
 import java.io.Serializable;
 
 public class Produto implements Serializable

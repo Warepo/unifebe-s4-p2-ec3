@@ -1,3 +1,5 @@
+package ec3.produtos;
+
 public class Teclado extends Produto
 {	
 	private String cor, marca;
@@ -16,11 +18,13 @@ public class Teclado extends Produto
 	}
 
 	
-	public void set_preco(double preco){
+	public void set_preco(double preco)
+{
 		 this.preco = preco;
 	}
 	
-	public void print_dados(){
+	public void print_dados()
+{
 		System.out.println("Nome: "+this.nome+" Marca:"+this.marca+" Cor:"+this.cor+" Serial: "+this.ID+" preco: "+this.preco+" Qtd de teclas: "+this.qtd_teclas+" � da Razer: "+this.razer);
 	}
 	

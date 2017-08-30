@@ -1,3 +1,5 @@
+package ec3.produtos;
+
 public class Colher extends ec3.Produto {
 	
 	private String cor, metal;

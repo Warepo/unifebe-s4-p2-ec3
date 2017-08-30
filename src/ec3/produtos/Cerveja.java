@@ -1,5 +1,7 @@
-public class Cerveja extends ec3.Produto{
-	
+package ec3.produtos;
+
+public class Cerveja extends Produto
+{	
 	private String tipo,marca;
 	private double preco;
 	private int qtd_fardo;
@@ -15,15 +17,18 @@ public class Cerveja extends ec3.Produto{
 		this.marca = marca;
 	}
 	
-	public Double get_preco(){
+	public Double get_preco()
+{
 		return this.preco;
 	}
 	
-	public void set_preco(double preco){
+	public void set_preco(double preco)
+{
 		 this.preco = preco;
 	}
 
-	public void print_dados(){
+	public void print_dados()
+{
 		System.out.println("Nome: "+this.nome+" Marca:"+this.marca+" Tipo:"+this.tipo+" Serial: "+this.ID+" preco: "+this.preco+" Quantidade em fardo: "+this.qtd_fardo+" Tem trigo: "+this.trigo);
 	}
 	
