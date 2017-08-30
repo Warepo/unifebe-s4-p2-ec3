@@ -1,15 +1,15 @@
 package ec3.produtos;
 
-public class Almofada extends Produto
+public class Almofada extends ec3.Produto
 {	
 	private String cor, marca;
 	private double preco;
 	private int qtd_de_penas;
 	private boolean penas;
 
-	public Almofada(String nome, String marca, String cor, String serial, double ID, double preco, int qtd_de_penas, boolean penas) 
+	public Almofada(String nome, String marca, String cor, String serial, double id, double preco, int qtd_de_penas, boolean penas) 
 	{
-		super(nome, serial, ID);
+		super(nome, serial, id);
 		// @TODO: Auto-generated constructor stub
 		
 		this.preco = preco;
@@ -31,7 +31,7 @@ public class Almofada extends Produto
 	
 	public void print_dados()
 	{
-		System.out.println("Nome: " + this.nome + " Marca: " + this.marca + " Serial: " + this.ID + " preco: " + this.preco + " Quantidade de penas: " + this.qtd_de_penas + " Tem penas: " + this.penas);
+		System.out.println("Nome: " + this.nome + " Marca: " + this.marca + " Serial: " + this.id + " preco: " + this.preco + " Quantidade de penas: " + this.qtd_de_penas + " Tem penas: " + this.penas);
 	}
 
 }

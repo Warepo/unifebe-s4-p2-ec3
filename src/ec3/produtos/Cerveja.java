@@ -1,14 +1,14 @@
 package ec3.produtos;
 
-public class Cerveja extends Produto
+public class Cerveja extends ec3.Produto
 {	
 	private String tipo,marca;
 	private double preco;
 	private int qtd_fardo;
 	private boolean trigo;
 
-	public Cerveja(String nome,String marca, String tipo, String serial, double ID, double preco, int qtd_fardo, boolean trigo) {
-		super(nome, serial, ID);
+	public Cerveja(String nome,String marca, String tipo, String serial, double id, double preco, int qtd_fardo, boolean trigo) {
+		super(nome, serial, id);
 		// TODO Auto-generated constructor stub
 		this.preco = preco;
 		this.tipo = tipo;
@@ -29,7 +29,7 @@ public class Cerveja extends Produto
 
 	public void print_dados()
 {
-		System.out.println("Nome: "+this.nome+" Marca:"+this.marca+" Tipo:"+this.tipo+" Serial: "+this.ID+" preco: "+this.preco+" Quantidade em fardo: "+this.qtd_fardo+" Tem trigo: "+this.trigo);
+		System.out.println("Nome: "+this.nome+" Marca:"+this.marca+" Tipo:"+this.tipo+" Serial: "+this.id+" preco: "+this.preco+" Quantidade em fardo: "+this.qtd_fardo+" Tem trigo: "+this.trigo);
 	}
 	
 

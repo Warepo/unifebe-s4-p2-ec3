@@ -7,9 +7,9 @@ public class Colher extends ec3.Produto {
 	private int peso;
 	private boolean de_sopa;
 
-	public Colher(String nome, String metal, String cor, String serial, double ID, double preco, int peso, boolean de_sopa) 
+	public Colher(String nome, String metal, String cor, String serial, double id, double preco, int peso, boolean de_sopa) 
 	{
-		super(nome, serial, ID);
+		super(nome, serial, id);
 
 		this.preco = preco;
 		this.cor = cor;
@@ -18,7 +18,7 @@ public class Colher extends ec3.Produto {
 		this.metal = metal;
 	}
 
-	public String getMetal()
+	public String get_metal()
 	{
 		return this.metal;
 	}
@@ -30,6 +30,6 @@ public class Colher extends ec3.Produto {
 	
 	public void print_dados()
 	{
-		System.out.println("Nome: " + this.nome + " Metal: " + this.metal + " Cor: " + this.cor + " Serial: " + this.ID + " preco: " + this.preco + " Peso: " + this.peso + " É de Sopa: " + this.de_sopa);
+		System.out.println("Nome: " + this.nome + " Metal: " + this.metal + " Cor: " + this.cor + " Serial: " + this.id + " preco: " + this.preco + " Peso: " + this.peso + " É de Sopa: " + this.de_sopa);
 	}
 }

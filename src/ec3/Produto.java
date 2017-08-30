@@ -7,12 +7,12 @@ public class Produto implements Serializable
 	private static final long serialVersionUID = 1L;
 
 	public String nome, serial;
-	public double ID;
+	public double id;
 
-	public Produto(String nome, String serial, double ID) 
+	public Produto(String nome, String serial, double id) 
 	{
 		this.nome = nome;
 		this.serial = serial;
-		this.ID = ID;
+		this.id = id;
 	}
 }
