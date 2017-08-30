@@ -1,3 +1,5 @@
+package ec3;
+
 import javax.swing.JOptionPane;
 
 import java.io.FileOutputStream;
@@ -18,12 +20,12 @@ public class Program
 		
 		do {
 			entrada = JOptionPane.showInputDialog(""
-				+ "Olá insira os atributos dos Produtos:\n"
+				+ "Olá insira os atributos dos Produto:\n"
 				+ "\t1) Almofada \n"
 				+ "\t2) Caixa de som \n"
 				+ "\t3) Cerveja \n"
 				+ "\t4) Colher \n"
-				+ "\t5) Produtos \n"
+				+ "\t5) Produto \n"
 				+ "\t6) Teclado \n"
 				+ "\t0) Sair"
 			);
@@ -43,7 +45,7 @@ public class Program
 					bool = JOptionPane.showConfirmDialog(null,"Mas tem penas?") == JOptionPane.YES_OPTION;
 					
 					Almofada almofada = new Almofada("Almofada", marca, cor, serial, id, 0, quantidade, bool);
-					almofada.setpreco(preco);
+					almofada.set_preco(preco);
 					
 					escrever.writeObject(almofada);
 				break;
@@ -59,7 +61,7 @@ public class Program
 					bool = JOptionPane.showConfirmDialog(null,"Usa pilhas?") == JOptionPane.YES_OPTION;
 					
 					Caixa_de_som caixa = new Caixa_de_som("Caixa de Som", marca, cor, serial, id, 0, quantidade, bool);
-					caixa.setpreco(preco);
+					caixa.set_preco(preco);
 					
 					escrever.writeObject(caixa);
 				break;
@@ -74,7 +76,7 @@ public class Program
 					bool = JOptionPane.showConfirmDialog(null, "É de trigo?") == JOptionPane.YES_OPTION;
 					 
 					Cerveja cerveja = new Cerveja("Caixa de Som", marca, cor, serial, id, 0, quantidade, bool);
-					cerveja.setpreco(preco);
+					cerveja.set_preco(preco);
 					
 					escrever.writeObject(cerveja);
 				break;
@@ -90,7 +92,7 @@ public class Program
 				 	bool = JOptionPane.showConfirmDialog(null, "É de sopa?") == JOptionPane.YES_OPTION;
 				 						 
 					Colher culhe = new Colher("Culher", marca, cor, serial, id, 0, quantidade, bool);
-					culhe.setpreco(preco);
+					culhe.set_preco(preco);
 					
 					escrever.writeObject(culhe);
 				break;
@@ -105,7 +107,7 @@ public class Program
 					bool = JOptionPane.showConfirmDialog(null, "É Razer?") == JOptionPane.YES_OPTION;
 
 					Teclado tecla = new Teclado("Teclado", marca, cor, serial, id, 0, quantidade, bool);
-					tecla.setpreco(preco);
+					tecla.set_preco(preco);
 					
 					escrever.writeObject(tecla);
 				break;

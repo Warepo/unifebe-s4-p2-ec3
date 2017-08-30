@@ -1,6 +1,4 @@
-package ec3;
-
-public class Almofada extends Produtos
+public class Almofada extends Produto
 {	
 	private String cor, marca;
 	private double preco;
@@ -19,17 +17,17 @@ public class Almofada extends Produtos
 		this.marca = marca;
 	}
 	
-	public Double getpreco()
+	public Double get_preco()
 	{
 		return this.preco;
 	}
 	
-	public void setpreco(double preco)
+	public void set_preco(double preco)
 	{
 		 this.preco = preco;
 	}
 	
-	public void getDados()
+	public void print_dados()
 	{
 		System.out.println("Nome: " + this.nome + " Marca: " + this.marca + " Serial: " + this.ID + " preco: " + this.preco + " Quantidade de penas: " + this.qtd_de_penas + " Tem penas: " + this.penas);
 	}

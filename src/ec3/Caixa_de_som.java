@@ -1,6 +1,6 @@
 package ec3;
 
-public class Caixa_de_som extends Produtos 
+public class Caixa_de_som extends Produto 
 {
 	private String cor,marca;
 	private double preco;
@@ -17,15 +17,15 @@ public class Caixa_de_som extends Produtos
 		this.marca = marca;
 	}
 	
-	public Double getpreco(){
+	public Double get_preco(){
 		return this.preco;
 	}
 	
-	public void setpreco(double preco){
+	public void set_preco(double preco){
 		 this.preco = preco;
 	}
 	
-	public void getDados(){
+	public void print_dados(){
 		System.out.println("Nome: "+this.nome+" Marca:"+this.marca+" Serial: "+this.ID+" preco: "+this.preco+" Quantidade de caixas: "+this.qtd_de_caixas+" Usa pilha: "+this.pilha);
 	}
 
