@@ -5,5 +5,5 @@ mkdir build
 cd .\src
 dir /s /B *.java > sources.txt
 javac @sources.txt -d ../build -encoding utf8
-rm ./sources.txt
+del rm ./sources.txt
 cd ..
