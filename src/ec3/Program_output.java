@@ -8,9 +8,11 @@ public class Program_output
 {
 	public static void main(String[] args) throws Exception 
 	{
-		FileInputStream local = new FileInputStream("..\\files\\produtos.dat");
+		FileInputStream local = new FileInputStream(".\\files\\produtos.dat");
 		ObjectInputStream ler = new ObjectInputStream(local);
-		
+
+
+
 		ler.close();
 	}
 }
