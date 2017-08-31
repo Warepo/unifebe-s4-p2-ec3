@@ -9,3 +9,7 @@ Thumbs.db
 # Text Editor / IDE
 .idea
 .vscode
+
+src/sources\.txt
+
+files/
