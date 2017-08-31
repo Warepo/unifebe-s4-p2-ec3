@@ -1,10 +1,9 @@
 @echo off
 title Building project!
 
+mkdir build
 cd .\src
-mkdir ..\build
-touch ./@sources
-dir /s /B *.java > @sources
-javac @sources -d ../build
-rm ./@sources
+dir /s /B *.java > sources.txt
+javac @sources.txt -d ../build -encoding utf8
+rm ./sources.txt
 cd ..
