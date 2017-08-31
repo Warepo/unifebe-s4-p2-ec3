@@ -34,68 +34,67 @@ public class Program
 
 			escolha = Integer.parseInt(entrada);
 
-			if(escolha != 0) {
+			if (escolha != 0) {
 				marca = JOptionPane.showInputDialog("Digite a marca");
 				cor = JOptionPane.showInputDialog("Digite qual a cor da caixa");
 				serial = JOptionPane.showInputDialog("Digite qual o serial");
 				id = Double.parseDouble(JOptionPane.showInputDialog("Digite qual o id"));
 				preco = Double.parseDouble(JOptionPane.showInputDialog("Digite qual o Preço"));
-			}else{
-				marca = null;
-				cor = null;
-				serial = null;
-				id = 0;
-				preco = 0;
-			}
-			switch (escolha)
-			{
-				case 1:
-				quantidade = Integer.parseInt(JOptionPane.showInputDialog("Quantas penas tem?"));
-				bool = JOptionPane.showConfirmDialog(null,"Mas tem penas?") == JOptionPane.YES_OPTION;
+			} else {
 
-				Almofada almofada = new Almofada("Almofada", marca, cor, serial, id, 0, quantidade, bool);
-				almofada.set_preco(preco);
+				switch (escolha)
+				{
+					case 1:
+					quantidade = Integer.parseInt(JOptionPane.showInputDialog("Quantas penas tem?"));
+					bool = JOptionPane.showConfirmDialog(null,"Mas tem penas?") == JOptionPane.YES_OPTION;
 
-				escrever.writeObject(almofada);
-				break;
+					Almofada almofada = new Almofada("Almofada", marca, cor, serial, id, 0, quantidade, bool);
+					almofada.set_preco(preco);
 
-				case 2:
-				bool = JOptionPane.showConfirmDialog(null,"Usa pilhas?") == JOptionPane.YES_OPTION;
-				quantidade = Integer.parseInt(JOptionPane.showInputDialog("Digite quantas caixas auxiliares"));
-				Caixa_de_som caixa = new Caixa_de_som("Caixa de Som", marca, cor, serial, id, 0, quantidade, bool);
-				caixa.set_preco(preco);
+					escrever.writeObject(almofada);
+					break;
 
-				escrever.writeObject(caixa);
-				break;
+					case 2:
+					quantidade = Integer.parseInt(JOptionPane.showInputDialog("Digite quantas caixas auxiliares"));
+					bool = JOptionPane.showConfirmDialog(null,"Usa pilhas?") == JOptionPane.YES_OPTION;
+					
+					Caixa_de_som caixa = new Caixa_de_som("Caixa de Som", marca, cor, serial, id, 0, quantidade, bool);
+					caixa.set_preco(preco);
 
-				case 3:
-				bool = JOptionPane.showConfirmDialog(null, "É de trigo?") == JOptionPane.YES_OPTION;
-				quantidade = Integer.parseInt(JOptionPane.showInputDialog("Quantas cervejas tem dento das caixas ?"));
-				Cerveja cerveja = new Cerveja("Caixa de Som", marca, cor, serial, id, 0, quantidade, bool);
-				cerveja.set_preco(preco);
+					escrever.writeObject(caixa);
+					break;
 
-				escrever.writeObject(cerveja);
-				break;
+					case 3:
+					quantidade = Integer.parseInt(JOptionPane.showInputDialog("Quantas cervejas tem dento das caixas ?"));
+					bool = JOptionPane.showConfirmDialog(null, "É de trigo?") == JOptionPane.YES_OPTION;
+					
+					Cerveja cerveja = new Cerveja("Caixa de Som", marca, cor, serial, id, 0, quantidade, bool);
+					cerveja.set_preco(preco);
 
-				case 4:
-				quantidade = Integer.parseInt(JOptionPane.showInputDialog("Digite o peso da colher"));
-				bool = JOptionPane.showConfirmDialog(null, "É de sopa?") == JOptionPane.YES_OPTION;
+					escrever.writeObject(cerveja);
+					break;
 
-				Colher culhe = new Colher("Culher", marca, cor, serial, id, 0, quantidade, bool);
-				culhe.set_preco(preco);
+					case 4:
+					quantidade = Integer.parseInt(JOptionPane.showInputDialog("Digite o peso da colher"));
+					bool = JOptionPane.showConfirmDialog(null, "É de sopa?") == JOptionPane.YES_OPTION;
 
-				escrever.writeObject(culhe);
-				break;
+					Colher culhe = new Colher("Culher", marca, cor, serial, id, 0, quantidade, bool);
+					culhe.set_preco(preco);
 
-				case 5:
-				quantidade = Integer.parseInt(JOptionPane.showInputDialog("Digite a quantidade de teclas"));
-				bool = JOptionPane.showConfirmDialog(null, "É Razer?") == JOptionPane.YES_OPTION;
+					escrever.writeObject(culhe);
+					break;
 
-				Teclado tecla = new Teclado("Teclado", marca, cor, serial, id, 0, quantidade, bool);
-				tecla.set_preco(preco);
+					case 5:
+					quantidade = Integer.parseInt(JOptionPane.showInputDialog("Digite a quantidade de teclas"));
+					bool = JOptionPane.showConfirmDialog(null, "É Razer?") == JOptionPane.YES_OPTION;
 
-				escrever.writeObject(tecla);
-				break;
+					Teclado tecla = new Teclado("Teclado", marca, cor, serial, id, 0, quantidade, bool);
+					tecla.set_preco(preco);
+
+					escrever.writeObject(tecla);
+					break;
+				}
+				
 			}
 
 
