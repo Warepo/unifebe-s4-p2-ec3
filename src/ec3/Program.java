@@ -10,14 +10,14 @@ import java.io.IOException;
 
 public class Program
 {
-	public static void main(String args[]) throws IOException
+	public static void main(String args[]) throws IOException,ClassNotFoundException
 	{
 		String entrada, marca, cor, serial;
 		int escolha, quantidade, comfirm;
 		double id, preco;
 		boolean bool;
 
-		FileOutputStream local = new FileOutputStream(".\\..\\files\\produtos.dat");
+		FileOutputStream local = new FileOutputStream(".\\files\\produtos.dat");
 		ObjectOutputStream escrever = new ObjectOutputStream(local);
 
 		do {
