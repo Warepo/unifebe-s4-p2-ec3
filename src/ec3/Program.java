@@ -34,17 +34,18 @@ public class Program
 
 			escolha = Integer.parseInt(entrada);
 
-			if (escolha != 0) {
+			if (escolha != 0) 
+			{
 				marca = JOptionPane.showInputDialog("Digite a marca");
 				cor = JOptionPane.showInputDialog("Digite qual a cor da caixa");
 				serial = JOptionPane.showInputDialog("Digite qual o serial");
 				id = Double.parseDouble(JOptionPane.showInputDialog("Digite qual o id"));
 				preco = Double.parseDouble(JOptionPane.showInputDialog("Digite qual o Preço"));
-			} else {
 
 				switch (escolha)
 				{
 					case 1:
+
 					quantidade = Integer.parseInt(JOptionPane.showInputDialog("Quantas penas tem?"));
 					bool = JOptionPane.showConfirmDialog(null,"Mas tem penas?") == JOptionPane.YES_OPTION;
 
