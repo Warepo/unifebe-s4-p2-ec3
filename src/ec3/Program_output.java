@@ -7,9 +7,9 @@ import java.io.FileInputStream;
 import java.io.ObjectInputStream;
 import java.io.IOException;
 
-public class Program_output 
+public class Program_output
 {
-	public static void main(String[] args) throws Exception 
+	public static void main(String[] args) throws IOException,ClassNotFoundException
 	{
 		String entrada;
 		int escolha;
@@ -33,16 +33,18 @@ public class Program_output
 			switch (escolha)
 			{
 				case 1:
-							Almofada al = (Almofada) ler.readObject();
-							al.print_dados();
+					Almofada al = (Almofada) ler.readObject();
+					al.print_dados();
 					break;
 
 				case 2:
-
+					Caixa_de_som cs = (Caixa_de_som) ler.readObject();
+					cs.print_dados();
 					break;
 
 				case 3:
-
+					Cerveja cv = (Cerveja) ler.readObject();
+					cv.print_dados();
 					break;
 
 				case 4:
