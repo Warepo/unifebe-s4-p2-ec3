@@ -10,7 +10,9 @@ public class Program_output
 	{
 		FileInputStream local = new FileInputStream("..\\files\\produtos.dat");
 		ObjectInputStream ler = new ObjectInputStream(local);
-		
+
+
+
 		ler.close();
 	}
 }
