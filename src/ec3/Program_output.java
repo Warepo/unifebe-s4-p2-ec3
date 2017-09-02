@@ -48,11 +48,13 @@ public class Program_output
 					break;
 
 				case 4:
-
+					Colher cl = (Colher) ler.readObject();
+					cl.print_dados();
 					break;
 
 				case 5:
-
+					Teclado tc = (Teclado) ler.readObject();
+					tc.print_dados();
 					break;
 			}
 
