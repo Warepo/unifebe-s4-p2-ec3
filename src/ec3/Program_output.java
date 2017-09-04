@@ -11,14 +11,13 @@ public class Program_output
 {
     public static void main(String[] args) throws IOException, ClassNotFoundException
     {
-        String entrada;
-        int escolha;
+        int entrada;
 
         FileInputStream local = new FileInputStream(".\\files\\produtos.dat");
         ObjectInputStream ler = new ObjectInputStream(local);
 
         do {
-            entrada = JOptionPane.showInputDialog(""
+            entrada = Integer.parseInt(JOptionPane.showInputDialog(""
                 + "Abra os produtos que você quer:\n"
                 + "\t1) Almofada \n"
                 + "\t2) Caixa de som \n"
@@ -27,9 +26,9 @@ public class Program_output
                 + "\t5) Produto \n"
                 + "\t6) Teclado \n"
                 + "\t0) Sair"
-              );
+              ));
 
-            switch (Integer.parseInt(entrada)) {
+            switch (entrada) {
                 case 1:
 
                     Almofada al = (Almofada) ler.readObject();
@@ -65,7 +64,7 @@ public class Program_output
 
                     break;
             }
-        } while (escolha != 0);
+        } while (entrada != 0);
 
         ler.close();
     } /* main */
