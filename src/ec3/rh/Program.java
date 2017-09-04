@@ -9,7 +9,7 @@ public class LerAgenda
     {
         File file = new File("..\\files\\contatos.dat");
 
-        file.createNewFile();
+        file.createNewFile(); 
 
         FileInputStream fileInput  = new FileInputStream(file);
         ObjectInputStream fileObj  = new ObjectInputStream(fileInput);
