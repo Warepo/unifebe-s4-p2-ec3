@@ -1,19 +1,23 @@
 package ec3.agenda;
 
-import java.io.FileInputStream;
-import java.io.ObjectInputStream;
-import java.io.IOException;
+import java.io.*;
+import java.util.*;
 
 public class Desserializa
 {
     public static void main(String[] args) throws Exception, ClassNotFoundException
     {
-        Contato carlos;
+        LinkedList<Object> lista;
 
         FileInputStream local = new FileInputStream("..\\files\\contatos.dat");
         ObjectInputStream ler = new ObjectInputStream(local);
 
-        carlos = (Contato) ler.readObject();
+        lista = (LinkedList<Object>) ler.readObject();
+
+        for (Iterator iterator = lista.iterator(); iterator.hasNext(); ) {
+            Contato pessoa = (Contato) iterator.next();
+            pessoa.print_dados();
+        }
 
         ler.close();
     }
