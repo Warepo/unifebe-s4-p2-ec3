@@ -4,9 +4,7 @@ import ec3.produtos.*;
 
 import javax.swing.JOptionPane;
 
-import java.io.FileOutputStream;
-import java.io.ObjectOutputStream;
-import java.io.IOException;
+import java.io.*;
 
 public class Program
 {
@@ -17,7 +15,11 @@ public class Program
         double id, preco;
         boolean bool;
 
-        FileOutputStream local      = new FileOutputStream("..\\files\\produtos.dat");
+        File file = new File("..\\files\\produtos.dat");
+
+        file.createNewFile();
+
+        FileOutputStream local      = new FileOutputStream(file);
         ObjectOutputStream escrever = new ObjectOutputStream(local);
 
         do {

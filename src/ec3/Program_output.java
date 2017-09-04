@@ -3,9 +3,7 @@ package ec3;
 import ec3.produtos.*;
 import javax.swing.*;
 
-import java.io.FileInputStream;
-import java.io.ObjectInputStream;
-import java.io.IOException;
+import java.io.*;
 
 public class Program_output
 {
@@ -13,7 +11,11 @@ public class Program_output
     {
         int entrada;
 
-        FileInputStream local = new FileInputStream("..\\files\\produtos.dat");
+        File file = new File("..\\files\\produtos.dat");
+
+        file.createNewFile();
+
+        FileInputStream local = new FileInputStream(file);
         ObjectInputStream ler = new ObjectInputStream(local);
 
         do {

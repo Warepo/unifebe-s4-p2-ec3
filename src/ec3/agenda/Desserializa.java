@@ -1,8 +1,6 @@
 package ec3.agenda;
 
-import java.io.FileInputStream;
-import java.io.ObjectInputStream;
-import java.io.IOException;
+import java.io.*;
 
 public class Desserializa
 {
@@ -10,8 +8,12 @@ public class Desserializa
     {
         Contato carlos;
 
-        FileInputStream local = new FileInputStream("..\\files\\contatos.dat");
-        ObjectInputStream ler = new ObjectInputStream(local);
+        File file = new File("..\\files\\contatos.dat");
+
+        file.createNewFile();
+
+        FileInputStream local  = new FileInputStream(file);
+        ObjectInputStream ler  = new ObjectInputStream(local);
 
         carlos = (Contato) ler.readObject();
 
