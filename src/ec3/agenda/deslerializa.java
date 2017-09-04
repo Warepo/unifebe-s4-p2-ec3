@@ -8,10 +8,12 @@ public class Deslerializa
 {
     public static void main(String[] args) throws Exception, ClassNotFoundException
     {
+        Contato carlos;
+
         FileInputStream local = new FileInputStream(".\\files\\Contatos.dat");
         ObjectInputStream ler = new ObjectInputStream(local);
 
-        Contato carlos = (Contato) ler.readObject();
+        carlos = (Contato) ler.readObject();
 
         ler.close();
     }
