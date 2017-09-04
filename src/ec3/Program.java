@@ -12,7 +12,7 @@ public class Program
 {
     public static void main(String args[]) throws IOException, ClassNotFoundException
     {
-        String entrada, marca, cor, serial;
+        String marca, cor, serial;
         int escolha, quantidade, comfirm;
         double id, preco;
         boolean bool;
@@ -21,7 +21,7 @@ public class Program
         ObjectOutputStream escrever = new ObjectOutputStream(local);
 
         do {
-            entrada = JOptionPane.showInputDialog(""
+            escolha = Integer.parseInt(JOptionPane.showInputDialog(""
                 + "Olá insira os atributos dos Produto:\n"
                 + "\t1) Almofada \n"
                 + "\t2) Caixa de som \n"
@@ -30,9 +30,7 @@ public class Program
                 + "\t5) Produto \n"
                 + "\t6) Teclado \n"
                 + "\t0) Sair"
-              );
-
-            escolha = Integer.parseInt(entrada);
+                ));
 
             if (escolha != 0) {
                 marca  = JOptionPane.showInputDialog("Digite a marca");
