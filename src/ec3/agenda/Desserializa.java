@@ -9,8 +9,12 @@ public class Desserializa
     {
         LinkedList<Object> lista;
 
-        FileInputStream local = new FileInputStream("..\\files\\contatos.dat");
-        ObjectInputStream ler = new ObjectInputStream(local);
+        File file = new File("..\\files\\contatos.dat");
+
+        file.createNewFile();
+
+        FileInputStream local  = new FileInputStream(file);
+        ObjectInputStream ler  = new ObjectInputStream(local);
 
         lista = (LinkedList<Object>) ler.readObject();
 

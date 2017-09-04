@@ -1,32 +1,36 @@
 package ec3.agenda;
 
+import ec3.agenda.Contato.*;
+
 import javax.swing.JOptionPane;
 import java.util.LinkedList;
-import java.io.FileOutputStream;
-import java.io.ObjectOutputStream;
-import java.io.IOException;
-import ec3.agenda.Contato.*;
+
+import java.io.*;
 
 public class Program
 {
     public static void main(String args[]) throws IOException
     {
         String nome;
-        int numero;
-        Contato pessoa;
+        int telefone;
+        Contato contato;
 
         LinkedList<Object> lista = new LinkedList<Object>();
 
-        FileOutputStream local      = new FileOutputStream("..\\files\\contatos.dat");
+        File file = new File("..\\files\\contatos.dat");
+
+        file.createNewFile();
+
+        FileOutputStream local      = new FileOutputStream(file);
         ObjectOutputStream escrever = new ObjectOutputStream(local);
 
         for (int i = 0; i <= 5; i++) {
             nome   = JOptionPane.showInputDialog("Digite o nome: ");
-            numero = Integer.parseInt(JOptionPane.showInputDialog("Digite o número de telefone: "));
+            telefone = Integer.parseInt(JOptionPane.showInputDialog("Digite o número de telefone: "));
 
-            pessoa = new Contato(nome, numero);
+            contato = new Contato(nome, telefone);
 
-            lista.add(pessoa);
+            lista.add(contato);
         }
 
         escrever.writeObject(lista);
