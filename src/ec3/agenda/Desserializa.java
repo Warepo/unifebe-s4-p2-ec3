@@ -10,7 +10,7 @@ public class Desserializa
     {
         Contato carlos;
 
-        FileInputStream local = new FileInputStream(".\\files\\Contatos.dat");
+        FileInputStream local = new FileInputStream("..\\files\\contatos.dat");
         ObjectInputStream ler = new ObjectInputStream(local);
 
         carlos = (Contato) ler.readObject();

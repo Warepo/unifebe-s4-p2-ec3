@@ -26,7 +26,7 @@ public class Program_output
                 + "\t5) Produto \n"
                 + "\t6) Teclado \n"
                 + "\t0) Sair"
-              ));
+                ));
 
             switch (entrada) {
                 case 1:

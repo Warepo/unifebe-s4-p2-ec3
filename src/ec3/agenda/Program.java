@@ -17,7 +17,7 @@ public class Program
 
         LinkedList<Object> lista = new LinkedList<Object>();
 
-        FileOutputStream local      = new FileOutputStream(".\\files\\Contatos.dat");
+        FileOutputStream local      = new FileOutputStream("..\\files\\contatos.dat");
         ObjectOutputStream escrever = new ObjectOutputStream(local);
 
         for (int i = 0; i <= 5; i++) {
