@@ -1,7 +1,5 @@
 package ec3.agenda;
 
-import ec3.agenda.Contato.*;
-
 import javax.swing.JOptionPane;
 import java.util.LinkedList;
 
@@ -11,12 +9,6 @@ public class Program
 {
     public static void main(String args[]) throws IOException
     {
-        String nome;
-        int telefone;
-        Contato contato;
-
-        LinkedList<Object> lista = new LinkedList<Object>();
-
         File file = new File("..\\files\\contatos.dat");
 
         file.createNewFile();
@@ -24,9 +16,16 @@ public class Program
         FileOutputStream local      = new FileOutputStream(file);
         ObjectOutputStream escrever = new ObjectOutputStream(local);
 
-        for (int i = 0; i <= 5; i++) {
-            nome   = JOptionPane.showInputDialog("Digite o nome: ");
-            telefone = Integer.parseInt(JOptionPane.showInputDialog("Digite o número de telefone: "));
+        String nome;
+        int telefone;
+        Contato contato;
+        LinkedList<Object> lista = new LinkedList<Object>();
+
+        int qtd = Integer.parseInt(JOptionPane.showInputDialog("Quantos contatos você deseja inserir?"));
+
+        for (int i = 0; i <= qtd; i++) {
+            nome     = JOptionPane.showInputDialog("Qual o nome do contato " + (i + 1) + "?");
+            telefone = Integer.parseInt(JOptionPane.showInputDialog("Qual o telefone do contato " + (i + 1) + "?"));
 
             contato = new Contato(nome, telefone);
 
@@ -34,6 +33,7 @@ public class Program
         }
 
         escrever.writeObject(lista);
+
         escrever.close();
     }
 }
