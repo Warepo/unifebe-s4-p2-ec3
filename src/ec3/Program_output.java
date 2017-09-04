@@ -1,8 +1,8 @@
 package ec3;
 
 import ec3.produtos.*;
-
 import javax.swing.*;
+
 import java.io.FileInputStream;
 import java.io.ObjectInputStream;
 import java.io.IOException;
@@ -29,31 +29,40 @@ public class Program_output
                 + "\t0) Sair"
               );
 
-            escolha = Integer.parseInt(entrada);
-            switch (escolha) {
+            switch (Integer.parseInt(entrada)) {
                 case 1:
+
                     Almofada al = (Almofada) ler.readObject();
                     al.print_dados();
+
                     break;
 
                 case 2:
+
                     Caixa_de_som cs = (Caixa_de_som) ler.readObject();
                     cs.print_dados();
+
                     break;
 
                 case 3:
+
                     Cerveja cv = (Cerveja) ler.readObject();
                     cv.print_dados();
+
                     break;
 
                 case 4:
+
                     Colher cl = (Colher) ler.readObject();
                     cl.print_dados();
+
                     break;
 
                 case 5:
+
                     Teclado tc = (Teclado) ler.readObject();
                     tc.print_dados();
+
                     break;
             }
         } while (escolha != 0);
