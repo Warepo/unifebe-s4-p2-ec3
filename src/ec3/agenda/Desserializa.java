@@ -3,6 +3,8 @@ package ec3.agenda;
 import java.io.*;
 import java.util.*;
 
+// TODO: mover para fora do .agenda
+// TODO: melhorar nomes das variáveis
 public class Desserializa
 {
     public static void main(String[] args) throws Exception, ClassNotFoundException
@@ -18,9 +20,12 @@ public class Desserializa
 
         lista = (LinkedList<Object>) ler.readObject();
 
-        for (Iterator iterator = lista.iterator(); iterator.hasNext(); ) {
-            Contato pessoa = (Contato) iterator.next();
-            pessoa.print_dados();
+        Contato contato;
+        Iterator iterator = lista.iterator();
+        
+        while (iterator.hasNext()) {
+            contato = (Contato) iterator.next();
+            contato.print_dados();
         }
 
         ler.close();
