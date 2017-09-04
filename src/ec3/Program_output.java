@@ -13,7 +13,7 @@ public class Program_output
     {
         int entrada;
 
-        FileInputStream local = new FileInputStream(".\\files\\produtos.dat");
+        FileInputStream local = new FileInputStream("..\\files\\produtos.dat");
         ObjectInputStream ler = new ObjectInputStream(local);
 
         do {

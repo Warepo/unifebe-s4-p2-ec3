@@ -17,7 +17,7 @@ public class Program
         double id, preco;
         boolean bool;
 
-        FileOutputStream local      = new FileOutputStream(".\\files\\produtos.dat");
+        FileOutputStream local      = new FileOutputStream("..\\files\\produtos.dat");
         ObjectOutputStream escrever = new ObjectOutputStream(local);
 
         do {
