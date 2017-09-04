@@ -4,7 +4,7 @@ import java.io.FileInputStream;
 import java.io.ObjectInputStream;
 import java.io.IOException;
 
-public class Deslerializa
+public class Desserializa
 {
     public static void main(String[] args) throws Exception, ClassNotFoundException
     {

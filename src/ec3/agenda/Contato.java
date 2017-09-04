@@ -17,6 +17,6 @@ public class Contato implements Serializable
 
     public void print_dados()
     {
-        System.out.print("Nome: " + this.nome + " Telefone: " + this.numero);
+        System.out.print("Nome: '" + this.nome + "' | Telefone: " + this.numero);
     }
 }
