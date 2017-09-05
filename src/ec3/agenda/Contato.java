@@ -6,8 +6,8 @@ public class Contato implements Serializable
 {
     private static final long serialVersionUID = 1L;
 
-    private String nome;
-    private int numero;
+    public String nome;
+    public int numero;
 
     public Contato(String nome, int numero)
     {
@@ -17,6 +17,8 @@ public class Contato implements Serializable
 
     public void print_dados()
     {
-        System.out.print("Nome: '" + this.nome + "' | Telefone: " + this.numero);
+        System.out.println();
+        System.out.println("Nome: " + this.nome);
+        System.out.println("Telefone: " + this.numero);
     }
 }

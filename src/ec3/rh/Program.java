@@ -8,6 +8,7 @@ public class Program
     public static void main(String[] args) throws Exception, ClassNotFoundException
     {
         File fileContatos = new File("..\\files\\contatos.dat");
+
         fileContatos.createNewFile();
         ObjectInputStream fileObjContatos = new ObjectInputStream(new FileInputStream(fileContatos));
 
@@ -18,28 +19,32 @@ public class Program
         LinkedList<Object> listContatos = (LinkedList<Object> )fileObjContatos.readObject();
         Iterator iterator = listContatos.iterator();
 
-        Contato contato;
+        ec3.agenda.Contato contato;
+        Funcionario funcionario;
         LinkedList<Object> list = new LinkedList<Object>();
 
         Scanner reader = new Scanner(System.in);
 
         while (iterator.hasNext()) {
-            contato = (Contato) iterator.next();
+            contato = (ec3.agenda.Contato)iterator.next();
             contato.print_dados();
 
-            System.out.print("Qual o nível de escolaridade do contato '" + contato.nome + "'?: ");
-            contato.nivelEscolaridade = reader.next();
             System.out.println();
 
-            System.out.print("Qual o cargo do contato '" + contato.nome + "'?: ");
-            contato.cargo = reader.next();
+            funcionario = new Funcionario(contato);
+
+            System.out.print("Qual o nível de escolaridade do contato '" + funcionario.nome + "'?: ");
+            funcionario.nivelEscolaridade = reader.next();
+
+            System.out.print("Qual o cargo do contato '" + funcionario.nome + "'?: ");
+            funcionario.cargo = reader.next();
+
+            System.out.print("Qual o salário pretendido do contato '" + funcionario.nome + "'?: ");
+            funcionario.salario = reader.nextFloat();
+
             System.out.println();
 
-            System.out.print("Qual o salário pretendido do contato '" + contato.nome + "'?: ");
-            contato.salario = reader.nextFloat();
-            System.out.println();
-
-            list.add(contato);
+            list.add(funcionario);
         }
 
         fileObjContatos.close();
