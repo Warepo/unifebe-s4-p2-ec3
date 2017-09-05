@@ -7,16 +7,13 @@ public class Program
 {
     public static void main(String[] args) throws Exception, ClassNotFoundException
     {
-        File fileAgenda = new File("..\\files\\contatos.dat");
+        File fileContatos = new File("..\\files\\contatos.dat");
+        fileContatos.createNewFile();
+        ObjectInputStream fileObjContatos = new ObjectInputStream(new FileInputStream(fileContatos));
 
-        fileAgenda.createNewFile();
-
-        ObjectInputStream fileObjContatos = new ObjectInputStream(new FileInputStream(fileAgenda));
-
-        File file = new File("..\\files\\rh.dat");
-        file.createNewFile();
-
-        ObjectInputStream fileObj = new ObjectInputStream(new FileInputStream(file));
+        File fileRh = new File("..\\files\\rh.dat");
+        fileRh.createNewFile();
+        ObjectOutputStream fileObj = new ObjectOutputStream(new FileOutputStream(fileRh));
 
         LinkedList<Object> listContatos = (LinkedList<Object> )fileObjContatos.readObject();
         Iterator iterator = listContatos.iterator();
@@ -44,7 +41,7 @@ public class Program
 
             list.add(contato);
         }
-        
+
         fileObjContatos.close();
 
         fileObj.writeObject(list);
