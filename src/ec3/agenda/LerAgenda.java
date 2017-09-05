@@ -11,14 +11,16 @@ public class LerAgenda
 
         file.createNewFile();
 
-        FileInputStream fileInput  = new FileInputStream(file);
-        ObjectInputStream fileObj  = new ObjectInputStream(fileInput);
+        FileInputStream fileInput = new FileInputStream(file);
+        ObjectInputStream fileObj = new ObjectInputStream(fileInput);
 
-        LinkedList<Object> list = (LinkedList<Object>) fileObj.readObject();
+        LinkedList<Object> list = (LinkedList<Object> )fileObj.readObject();
 
         Contato contato;
 
-        for (Iterator iterator = list.iterator(); iterator.hasNext(); ) {
+        Iterator iterator = list.iterator();
+
+        while (iterator.hasNext()) {
             contato = (Contato) iterator.next();
             contato.print_dados();
         }

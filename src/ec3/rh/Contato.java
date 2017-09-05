@@ -6,9 +6,9 @@ public class Contato implements Serializable
 {
     private static final long serialVersionUID = 1L;
 
-    private String nome, nivelEscolaridade, cargo;
-    private int numero;
-    private double salario;
+    public String nome, nivelEscolaridade, cargo;
+    public int numero;
+    public double salario;
 
     public Contato(String nome, int numero, String nivelEscolaridade, String cargo, double salario)
     {

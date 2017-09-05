@@ -13,13 +13,12 @@ public class Program
 
         file.createNewFile();
 
-        FileOutputStream local      = new FileOutputStream(file);
-        ObjectOutputStream escrever = new ObjectOutputStream(local);
+        FileOutputStream fileInput = new FileOutputStream(file);
+        ObjectOutputStream fileObj = new ObjectOutputStream(fileInput);
 
         String nome;
         int telefone;
-        Contato contato;
-        LinkedList<Object> lista = new LinkedList<Object>();
+        LinkedList<Object> list = new LinkedList<Object>();
 
         int qtd = Integer.parseInt(JOptionPane.showInputDialog("Quantos contatos você deseja inserir?"));
 
@@ -27,13 +26,11 @@ public class Program
             nome     = JOptionPane.showInputDialog("Qual o nome do contato " + (i + 1) + "?");
             telefone = Integer.parseInt(JOptionPane.showInputDialog("Qual o telefone do contato " + (i + 1) + "?"));
 
-            contato = new Contato(nome, telefone);
-
-            lista.add(contato);
+            list.add(new Contato(nome, telefone));
         }
 
-        escrever.writeObject(lista);
+        fileObj.writeObject(list);
 
-        escrever.close();
+        fileObj.close();
     }
 }
