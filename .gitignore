@@ -12,5 +12,5 @@ Thumbs.db
 
 # Project ignores
 src/sources\.txt
-files/*
-build/*
+files/
+build/
